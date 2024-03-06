@@ -8,8 +8,9 @@ console.log(titleArray);
 console.log(inputTitleArray);
 console.log(section);
 
-addArray.addEventListener('click', () => {
+addArray.addEventListener('click', (e) => {
   // console.log('Je veux un tableau');
+  e.preventDefault();
   let div = document.createElement('div');
   div.classList.add('array');
   let arrayAdded = section.appendChild(div);
