@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.click-event-box {
+  display: flex;
+  gap: 5px;
+  width: 90%;
+  margin: 30px auto auto;
+}
+
+section {
+  background-color: red;
+  display: flex;
+  margin: auto;
+  gap: 30px;
+  justify-content: space-evenly;
+
+  margin-top: 16px;
+}
+
+.array {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 300px;
+  border: 2px solid black;
+  height: 300px;
+  text-align: center;
+}
+
+#btn-list{
+  
+}
