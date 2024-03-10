@@ -12,12 +12,12 @@
 }
 
 section {
-  background-color: red;
+
   display: flex;
   margin: auto;
   gap: 30px;
   justify-content: space-evenly;
-
+flex-wrap: wrap;
   margin-top: 16px;
 }
 
@@ -31,6 +31,17 @@ section {
   text-align: center;
 }
 
-#btn-list{
-  
+.array-title-container{
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 16px;
 }
+
+.array-title-container > button{
+  padding: 5px 15px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
