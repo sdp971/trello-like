@@ -3,6 +3,11 @@ const form = document.querySelector('form');
 const input = document.querySelector('form > input ');
 
 
+
+
+
+
+
 const arrays = [];
 
 form.addEventListener('submit', (event) => {
@@ -30,7 +35,7 @@ const createArrayElement = (array, index) => {
   div.innerHTML = `
     <div class='array-container'>
       <p class="array-title">${array.title}</p>
-      <button>Supprimer</button>
+      <button type="submit">Supprimer</button>
     </div>
     <div class="card-container">
     </div>
@@ -43,6 +48,11 @@ const createArrayElement = (array, index) => {
       <button type="submit" id="btn-array">Ajouter</button>
     </form>
   `;
+
+  const buttonDelete = div.querySelector('button');
+  buttonDelete.addEventListener('click', (event) => { 
+    deleteArray(index);
+  })
 
   const cardContainer = div.querySelector('.card-container');
   array.cards.forEach((card) => {
@@ -96,11 +106,18 @@ const addArray = (text) => {
   console.log(arrays);
 };
 
+const deleteArray = (index) => { 
+  arrays.splice(index, 1);
+  displayArray();
+}
+
 const addCard = (text, array) => {
   const newCard = { title: text };
   array.cards.push(newCard);
   return newCard;
 };
+
+
 
 
 
