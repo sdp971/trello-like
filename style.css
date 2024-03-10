@@ -14,7 +14,6 @@
 section {
   background-color: red;
   display: flex;
-  width: 300px;
   margin: auto;
   gap: 30px;
   justify-content: space-evenly;
@@ -26,7 +25,12 @@ section {
   display: flex;
   flex-direction: column;
   background-color: white;
-  max-width: 100%;
+  width: 300px;
   border: 2px solid black;
   height: 300px;
+  text-align: center;
+}
+
+#btn-list{
+  
 }

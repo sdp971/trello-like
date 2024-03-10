@@ -1,11 +1,11 @@
 const addArray = document.querySelector('#btn-array');
-const titleArray = document.querySelector('.array-title');
-const inputTitleArray = document.querySelector('input[type="text"]');
+let titleArray = '';
+const inputTitleArray = document.getElementById('input-array-title');
 const section = document.querySelector('section');
 
 console.log(addArray);
-console.log(titleArray);
-console.log(inputTitleArray);
+
+console.log('valeur array', inputTitleArray);
 console.log(section);
 
 addArray.addEventListener('click', (e) => {
@@ -13,12 +13,11 @@ addArray.addEventListener('click', (e) => {
   e.preventDefault();
   let div = document.createElement('div');
   div.classList.add('array');
-  let arrayAdded = section.appendChild(div);
+  section.appendChild(div);
   let p = document.createElement('p');
   p.classList.add('array-title');
-  arrayAdded.appendChild(p);
+  div.appendChild(p);
+  p.innerText = inputTitleArray.value;
 });
 
-inputTitleArray.addEventListener('input', (e) => {
-  console.log(e.target.value);
-});
+
